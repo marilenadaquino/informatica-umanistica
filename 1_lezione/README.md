@@ -15,7 +15,7 @@ ToC
 
  * Assegnista di ricerca presso il centro di ricerca [Digital Humanities Advanced Research Centre (/DH.arc)](https://centri.unibo.it/dharc/en), Dipartimento di Filologia Classica e Italianistica, Università di Bologna.
  * Ho un dottorato in _Biblioteconomia e Archivistica_
- * Mi occupo di _Digital Humanities_ / _Semantic Web_ / _Beni Culturali_ 
+ * Mi occupo di _Digital Humanities_ / _Semantic Web_ / _Beni Culturali_
 
 ### Temi del corso
 
@@ -41,7 +41,7 @@ Il corso è pensato per (1) consentire a studenti di Scienze della comunicazione
 
 ## Modalità di svolgimento delle lezioni
 
-Durante il corso vedremo tutte le fasi di (1) project management, (2) communication strategy development e (3) sviluppo di un sito web. 
+Durante il corso vedremo tutte le fasi di (1) project management, (2) communication strategy development e (3) sviluppo di un sito web.
 
 Intervalleremo lezioni frontali [F] e laboratoriali [L]. Iniziamo con il quarto d'ora accademico.
 
@@ -56,12 +56,12 @@ Per le lezioni laboratoriali (sotto indicate con [L]) *è richiesto l'utilizzo d
  5. [L] HTML: blocchi logici
  6. [F] Progettazione d’interfaccia
  7. [L] HTML e CSS: stili per il template
- 8. [L] CSS: font, palette colori
- 9. [L] HTML and CSS: interazione utente 
+ 8. [L] CSS: font, colori, immagini e icone
+ 9. [L] HTML and CSS: interazione utente
  10. [L] Framework per la grafica: Bootstrap
- 11. [L] Javascript: interazione utente (Bootstrap, JQuery)
- 12. [F] Discoverability e arricchimento (social, widgets, SEO, metadatazione, analytics)
- 13. [L] HTML: metadatazione, analytics
+ 11. [L] HTML and CSS
+ 12. [L] Javascript: interazione utente (Bootstrap, JQuery)
+ 13. [L] Discoverability e arricchimento (social, widgets, SEO, metadatazione, analytics)
  14. [L] Github e pubblicazione del sito web
  15. [F] Q&A
 
@@ -75,7 +75,7 @@ Il risultato finale del corso è la realizzazione di un **progetto web**, che si
 
 **L'idea**
 
-Si può scegliere un argomento a piacere, di rilievo, che consenta di sviluppare un sito web che includa caratteristiche innovative. 
+Si può scegliere un argomento a piacere, di rilievo, che consenta di sviluppare un sito web che includa caratteristiche innovative.
 
  - i contenuti devono essere innovativi: non deve essere la copia di un sito esistente
  - i contenuti devono essere scritti in un linguaggio appropriato e adeguato al medium
@@ -99,7 +99,7 @@ La realizzazione di un sito web segue alcune buone pratiche per la progettazione
 
 **Output**
 
- 1. un documento (HTML) che (1) include le informazioni richieste dal [template](../template_documentazione.md) ed (2) è inserito nel sito web sotto specificato in una pagina HTML dedicata. 
+ 1. un documento (HTML) che (1) include le informazioni richieste dal [template](../template_documentazione.md) ed (2) è inserito nel sito web sotto specificato in una pagina HTML dedicata.
  2. scelta di un obiettivo in termini di comunicazione web da realizzare. Potete scegliere tra:
  	- almeno 20 like/retweet di un post sul vostro sito web su uno o più social a scelta
  	- 50 visite al vostro sito web da utenti unici
@@ -114,7 +114,7 @@ L'obiettivo raggiunto va descritto nella documentazione alla sezione 5 di _Commu
 Realizzare un sito web.
 
 **Output**
- 1. almeno 2 pagine HTML: (1) Home del sito web (2) la documentazione di project management e communication strategy sopra descritta. Tutte le ulteriori pagine utili a definire il progetto compiutamente (e.g. pagine di About, pagine dedicate aservizi specialistici, ecc.) sono benvenute. 
+ 1. almeno 2 pagine HTML: (1) Home del sito web (2) la documentazione di project management e communication strategy sopra descritta. Tutte le ulteriori pagine utili a definire il progetto compiutamente (e.g. pagine di About, pagine dedicate aservizi specialistici, ecc.) sono benvenute.
  2. 1 file CSS, contenente le istruzioni per la grafica del sito web
  3. [OPZIONALE] 1 file Javascript, contenente istruzioni per gli aspetti di interattività della pagina
 
@@ -131,7 +131,7 @@ La prova finale consiste in una presentazione di 10-15 minuti del proprio proget
 ##### Cosa fare prima dell'esame?
 
 **Per tutti:**
- 
+
  1. Pubblicare il sito web contenente le pagine sopra elencate
  2. Aver raggiunto uno degli obiettivi comunicativi sopra elencati
  3. _Al più tardi il giorno prima dell'esame_ aprire una [issue](https://github.com/marilenadaquino/informatica-umanistica/issues) sul repository del corso, inserendo come testo: nome, cognome. nome del sito. URL del sito web
@@ -156,7 +156,7 @@ Le date verranno pubblicate su AlmaEsami. Sono previsti 6 appelli tra gennaio a 
 ## Richiedi una tesi
 
 I miei temi
- 
+
  * Organizzazione della conoscenza per i Beni culturali
  * Tecnologie del Semantic Web per i Beni Culturali
  * Data analytics and visualization
@@ -177,9 +177,8 @@ La richiesta va fatta dai 3-4 mesi prima della sessione di laurea scelta.
 ### Tesi sperimentali
 
 Richiede competenze tecniche, da sviluppare prima e durante il corso della realizzazione della tesi, per creare un progetto (web) rilevante con i temi di ricerca sopra elencati.
- 
+
  * Progettazione di risorse web per il dominio dei beni culturali
  * Utilizzo di tecnologie sperimentali
 
 La richiesta va fatta 6 mesi prima della sessione di laurea scelta.
-
