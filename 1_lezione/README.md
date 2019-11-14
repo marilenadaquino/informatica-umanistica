@@ -49,21 +49,21 @@ Per le lezioni laboratoriali (sotto indicate con [L]) *è richiesto l'utilizzo d
 
 ## Temi delle lezioni
 
- 1. [F] Presentazione del corso
- 2. [F] Project management Plan
- 3. [F] Communication Strategy
- 4. [F] Architettura di una pagina Web
- 5. [L] HTML: blocchi logici
- 6. [F] Progettazione d’interfaccia
- 7. [L] HTML e CSS: stili per il template
- 8. [L] CSS: font, colori, immagini e icone
- 9. [L] HTML and CSS: interazione utente
- 10. [L] Framework per la grafica: Bootstrap
- 11. [L] HTML and CSS
- 12. [L] Javascript: interazione utente (Bootstrap, JQuery)
- 13. [L] Discoverability e arricchimento (social, widgets, SEO, metadatazione, analytics)
- 14. [L] Github e pubblicazione del sito web
- 15. [F] Q&A
+ 1. [F] MAR 12.11.2019 - Presentazione del corso
+ 2. [F] MER 13.11.2019 - Project management Plan
+ 3. [F] GIO 14.11.2019 - Communication Strategy
+ 4. [F] MAR 19.11.2019 - Architettura di una pagina Web
+ 5. [L] MER 20.11.2019 - HTML: blocchi logici
+ 6. [F] GIO 21.11.2019 - Progettazione d’interfaccia
+ 7. [L] MAR 26.11.2019 - HTML e CSS: stili per il template
+ 8. [L] MER 27.11.2019 - CSS: font, colori, immagini e icone
+ 9. [L] GIO 28.11.2019 - HTML and CSS: interazione utente
+ 10. [L] MAR 3.12.2019 - Framework per la grafica: Bootstrap
+ 11. [L] MER 4.12.2019 - HTML and CSS: ricapitoliamo
+ 12. [L] GIO 5.12.2019 - Javascript: interazione utente (Bootstrap, JQuery)
+ 13. [L] MAR 10.12.2019 - Github e pubblicazione del sito web
+ 14. [L] MER 11.12.2019 - Discoverability e arricchimento (social, widgets, SEO, metadatazione, analytics)
+ 15. [F] 12.12.2019 - Q&A
 
 ## Il progetto
 
