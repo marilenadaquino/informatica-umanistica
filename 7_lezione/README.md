@@ -83,6 +83,8 @@ Per richiamare gli elementi del file html a cui si vuole applicare uno stile si 
 
 Margini, padding, bordi possono essere applicati a **blocchi logici** della pagina.
 
+Lo spazio nel web si può misurare in `px` (misura fissa), `%` (relativa all'elemento contenitore), `em` (relativa alla grandezza del font dell'elemento contenitore) e `rem` (relativa alla grandezza di default del font dell'elemento html)
+
 Il padding (spazio tra il contenuto e il bordo) può essere definito per ciascun lato del blocco di testo a cui viene applicato `padding-{lato}`
 
 ~~~~
@@ -169,6 +171,8 @@ In questo laboratorio proviamo a riprodurre il seguente template grafico:
 
 ![screenshot1](screenshot1.png)
 ![screenshot2](screenshot2.png)
+
+Una demo della pagina è disponibile [qui](https://templated.co/undeviating)
 
 **[DISCLAIMER]** Si possono modificare i contenuti, i colori e le icone a piacere, rispettando comunque il template.
 
