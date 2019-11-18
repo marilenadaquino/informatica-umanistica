@@ -252,7 +252,7 @@ Esistono altre tipologie di comportamenti (più sofisticate) che favoriscono l'i
  * sliders
  * mappe interattive
  * carousel di immagini
- * autosuggest, as-you-type results,
+ * autosuggest, as-you-type results
  * paginazione dei risultati
 
 Molte di queste tipologie richiedono istruzioni CSS più complesse o l'utilizzo di Javascript per modificare il comportamento di default degli elementi della pagina.
