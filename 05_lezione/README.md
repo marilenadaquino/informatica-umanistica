@@ -135,7 +135,7 @@ Guardiamo la struttura e la sintassi dei contenuti della pagina:
     3. il valore dell'elemento.
 
  5. Il **valore** di un elemento può includere:
- 
+
     1. altri elementi (`<section><p>...</p></section>`)
     2. semplice testo (`<p>autore: Andrea Bocelli</p>`)
     3. altri Elementi e testo (e.g. `<p>titolo: <i>Romanza</i></p>`)
@@ -205,10 +205,11 @@ Guardiamo la struttura e la sintassi dei contenuti della pagina:
  ~~~~
 
  Buona pratica è utilizzare _lowercase_ per i tag e gli attributi.
-2. **L'indentazione** del codice è una buona pratica (per la leggibilità del codice) ma non è obbligatoria.
-~~~~
-<p>Questo è un paragrafo che finisce qui.</p><P>Qui inizia il paragrafo successivo, su una nuova linea, anche se non ho indentato il codice.</P>
-~~~~
+
+ 2. **L'indentazione** del codice è una buona pratica (per la leggibilità del codice) ma non è obbligatoria.
+ ~~~~
+ <p>Questo è un paragrafo che finisce qui.</p><P>Qui inizia il paragrafo successivo, su una nuova linea, anche se non ho indentato il codice.</P>
+ ~~~~
 
  In un browser vedremo:
 
@@ -220,14 +221,15 @@ Guardiamo la struttura e la sintassi dei contenuti della pagina:
 
  N.B. Ciò significa che andando a capo nella scrittura del testo, il browser non andrà a capo a sua volta!! Solo specificando la fine dell'elemento - ed eventualmente gli stili per la grafica - si può _obbligare_ il browser a mandare a capo.
 
-3. Altra buona pratica è aggiungere commenti nel codice per annotare cosa si sta facendo o cosa si intende fare. Il contenuto dei commenti non viene visualizzato dal browser. I commenti sono inclusi tra  `<!-- -->`
-~~~~
-<p id="7" class="link_video">
+ 3. Altra buona pratica è aggiungere commenti nel codice per annotare cosa si sta facendo o cosa si intende fare. Il contenuto dei commenti non viene visualizzato dal browser. I commenti sono inclusi tra  `<!-- -->`
+
+ ~~~~
+ <p id="7" class="link_video">
    <a href="https://www.youtube.com/watch?v=hVHTkpk-1sM">ascolta l'album su youtube</a>
    <!-- TO DO: aggiungi link a Spotify -->
-</p>
-~~~~
-4. HTML non include aspetti di _semantica_, e.g. non è possibile specificare se si sta parlando di una persona, di un luogo o di un oggetto che è (potenzialmente) descritto in altri documenti web. Per questi aspetti esistono altre tecnologie, dette _Semantic Web_, per arricchire una pagina web con descrizioni di concetti (reali e astratti) e relazioni tra concetti (e.g. _avere autore_)
+ </p>
+ ~~~~
+ 4. HTML non include aspetti di _semantica_, e.g. non è possibile specificare se si sta parlando di una persona, di un luogo o di un oggetto che è (potenzialmente) descritto in altri documenti web. Per questi aspetti esistono altre tecnologie, dette _Semantic Web_, per arricchire una pagina web con descrizioni di concetti (reali e astratti) e relazioni tra concetti (e.g. _avere autore_)
 
 #### 1.2 Elementi principali del vocabolario HTML
 
