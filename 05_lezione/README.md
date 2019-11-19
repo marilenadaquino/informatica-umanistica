@@ -334,7 +334,7 @@ Per esempio:
 
 ~~~~
 <footer>
-  <p>Sito realizzato da <a href="http://example.com">me</a></p
+  <p>Sito realizzato da <a href="http://example.com">me</a></p>
 </footer>
 ~~~~
 
