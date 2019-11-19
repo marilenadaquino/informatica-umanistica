@@ -7,8 +7,8 @@ In questa lezione parliamo di:
  * repository per lo storage e l'update di codice software
  * creazione di un account sul sito di un provider online (github)
  * creazione di un repository Git
- * installazione di una applicazione desktop per gestire il nostro codice
- * creazione di una o più pagine web al progetto e pubblicazione
+ * upload dei file del sito sul repository remoto
+ * pubblicazione del sito
 
 #### Version Control System (VCS)
 Sistemi VCS permettono di registrare i cambiamenti di un file (o di un gruppo di file) nel corso del tempo, salvando versioni diverse degli stessi file. Permettono ad un utente:
@@ -23,7 +23,7 @@ Alcuni sistemi VCS, chiamati DVCS (Distributed Version Control Systems) consento
  * depositato in un deposito centrale remoto (online, e.g. Github)
  * ogni collaboratore ha una copia speculare dei file sulla propria macchina (**client**), inclusiva di tutti i file **per ogni versione** nel tempo (_snapshots_) e della **storia dei cambiamenti** dei file.
 
-![dvcs](dvcs.png)
+![dvcs](img/dvcs.png)
 
 Se il server online ha **problemi**, ogni client ha una copia speculare che può essere copiata nel repository centrale. Viceversa, se un client ha problemi, può recuperare il codice online e copiarlo localmente.
 
@@ -63,7 +63,7 @@ Il **push** (caricamento) di file sul repository online avviene nelle seguenti f
 
  1. aprire il browser e andare alla pagina [https://github.com/join](https://github.com/join)
 
-![join.png](join.png)
+![join.png](img/join.png)
  2. inserire username, la mail e una password.
 
 **N.B.** Lo _username_ che scegliete farà pare della URL del sito finale! lo username può essere riconducibile a voi, alla persona/azienda per cui fate il sito, o a nessuno.  
@@ -71,38 +71,38 @@ La _password_ deve contenere lettere minuscole, maiuscole, almeno un numero e al
 
 3. se non vengono segnalati errori scorrete la pagina verso il basso e premete sul tasto `Verifica`
 
-![verifica.png](verifica.png)
+![verifica.png](img/verifica.png)
 
 4. eseguite le operazioni richieste sul CAPTCHA (in genere vi viene chiesto di premere su delle frecce per ruotare una immagine finchè non è nella posizione corretta. Può chiedere di ripetere l'operazione più volte)
 
-![ruota.png](ruota.png)
+![ruota.png](img/ruota.png)
 
 5. quando compare la spunta verde, potete premere sul bottone `Next: Select a plan`
 
-![spunta.png](spunta.png)
+![spunta.png](img/spunta.png)
 
 6. selezionate l'opzione gratuita a sinistra, premendo sul bottone `Choose Free`
 
-![free.png](free.png)
+![free.png](img/free.png)
 
 7. Selezionate i box per rispondere alle domande e cliccate su `Complete setup` (oppure saltate cliccando direttamente su `Skip this step`)
 
-![complete1.png](complete1.png)
-![complete2.png](complete2.png)
+![complete1.png](img/complete1.png)
+![complete2.png](img/complete2.png)
 
 8. Vi viene chiesto di verificare la vostra email.
 
-![verify.png](verify.png)
+![verify.png](img/verify.png)
 
 9. Andate nella vostra email e premete il bottone `Verify email address`
 
-![email.png](email.png)
+![email.png](img/email.png)
 
 10. Venite reindirizzati nella pagina del vostro account su github per creare un nuovo repository (vedi sotto)
 
 #### 2. Creare un repository remoto
 
-![newrepo.png](newrepo.png)
+![newrepo.png](img/newrepo.png)
 
 11. inserite il nome del repository (progetto) che volete creare (`repository name`)
 
@@ -114,49 +114,88 @@ La _password_ deve contenere lettere minuscole, maiuscole, almeno un numero e al
 
 15. venite reindirizzati sulla pagina github del vostro repository. Well done!
 
-![repodone.png](repodone.png)
+![repodone.png](img/repodone.png)
 
-**PRENDETE NOTA** della URL del vostro sito (in alto nella barra del browser). Come vedrete sarà una URL nella seguente forma (le parentesi `[]` sono qui aggiunte per distinguere le parti variabili da quelle comuni a tutti)
+**PRENDETE NOTA** della URL del vostro repository (in alto nella barra del browser). Questa sarà la URL che userete per caricare il codice, che **non coinciderà** con la URL del sito finale. Come vedrete sarà una URL nella seguente forma (le parentesi `[]` sono qui aggiunte per distinguere le parti variabili da quelle comuni a tutti)
 
 `https://github.com/[nome-utente]/[nome-repository]`
 
-#### 3. Applicazione client per gestire il codice: SourceTree
+#### 3. Upload dei file del sito sul repository remoto
 
-Per caricare il nostro codice sul repository online (ed eventualmente per scaricare il codice modificato dai nostri collaboratori) possiamo:
+Per caricare il nostro codice sul repository online possiamo scegliere una delle seguenti tre opzioni:
 
- * utilizzare un terminale (una interfaccia per inserire istruzioni in un linguaggio specifico -- git -- e comunicare direttamente con la nostra macchina)
- * utilizzare una GUI (graphical user interface) per semplificare il processo di modifica/stage/commit/push
+  1. utilizzare un terminale (una interfaccia per inserire istruzioni in un linguaggio specifico -- git -- e comunicare direttamente con la nostra macchina e il server remoto)
 
-In questo corso utilizziamo [SourceTree](https://www.sourcetreeapp.com/)
+  2. utilizzare una GUI (graphical user interface) per semplificare il processo di modifica/stage/commit/push sul server remoto
 
-**ATTENZIONE!** Per problemi di compatibilità con vecchi sistemi operativi non aggiornati, non possiamo utilizzare l'utlima versione di SourceTree e dobbiamo selezionare una versione precedente del software SourceTree. Putroppo il sito non offre informazioni su quale versione sia compatibile con il proprio computer, quindi faremo delle prove, ovvero:
+  3. **utilizzare il sistema di upload fornito da GitHub**
 
-1. apriamo il browser e andiamo alla pagina [https://www.sourcetreeapp.com/download-archives](https://www.sourcetreeapp.com/download-archives)
+_**ATTENZIONE** In questo corso, per semplicità, utilizziamo il **terzo metodo**. Ciò significa che non cloneremo il repository remoto sul nostro computer e quindi i file locali sul nostro computer non saranno necessariamente allineati a quelli online! Starà a noi, caricare/modificare/cancellare i file che vogliamo che stiano sul repository online e non ci sarà effettiva comunicazione remoto/locale._
 
-![download](download.png)
+Facciamo una prova con un file html che trovate in questa cartella.
 
-2. a seconda del nostro sistema operativo guardiamo nella tabella che ci serve (Mac o Windows) e selezioniamo un file `zip` (Mac) o `exe` (Windows) da scaricare
+ 1. aprite il file `index.html`
+ 2. cliccate sul bottone `Raw` (in alto a destra)
+ 3. copiate il contenuto della pagina (CTRL+A e CTRL+C su Windows ; cmd+A e cmd+C su Mac)
+ 4. aprite Sublime Text (o un altro editor)
+ 5. create un nuovo file
+ 6. incollate il contenuto della pagina html (CTRL+V su Windows ; cmd+V su Mac)
+ 7. salvate con nome il file `index.html`
+ 8. tornate sulla pagina del repository github
 
-3. clicchiamo sul link `ZIP/EXE` a destra
+![upload.png](img/upload.png)
 
-3. accettiamo la licenza per l'utilizzo e premiamo di nuovo `Download`
+ 9. cliccate sul bottone `Upload files`, venite reindirizzati in un'altra pagina in cui potete caricare i vostri file **ogni volta che vi servirà**
 
-![agree](agreement.png)
+![uploadGit.png](img/uploadGit.png)
 
-4. andiamo nella cartella `Download` del nostro computer
+Per caricare i file (_che siano nuovi file o gli stessi file con modifiche_) dovete:
 
-5. clicchiamo sul file .exe (Windows) o .zip (Mac)
+ * fate **drag&drop** dei file e delle cartelle nell'area designata (ovvero trascinate nell'area designata il file `index.html` appena creato dalla cartella in cui l'avete salvato).
+ * inserire un **titolo** (minimale!!) con un summary delle modifiche che state apportando al repository (e.g. initial commit, min fix, modifiche grafica). La descrizione _non è indispensabile_
+ * **non toccare** le spunte sotto all'area di testo
+ * **ASPETTARE** che il caricamento dei file sia completato (guardate la barra di caricamento che appare prima dell'area di testo
+ * **QUANDO IL CARICAMENTO E' FINITO** cliccare sul bottone verde `Commit changes`
 
-  * se ci da un **messaggio di errore** e non fa aprire il file zip/exe: cancelliamo il file dai Download, torniamo sul [sito web](https://www.sourcetreeapp.com/download-archives) e scarichiamo lo zip/exe successivo nella tabella
-  * se non da errore, abbiamo trovato la versione compatibile con il nostro sistema
+N.B. Per il caricamento di molti file o di immagini pesanti può volerci anche qualche minuto.
 
-6. clicchiamo sul file dell'applicazione _unzippata_ e si apre l'interfaccia di SourceTree
+Dopo pochi secondi dal commit le modifiche sono visibili nella pagina principale del repository, dove troverete l'indice dei vostri file (e cartelle) affiancate dalla breve descrizione che avete inserito.
 
-#### 4. Creare un sito del progetto
+_**ATTENZIONE** la pagina `index.html` DEVE essere inserita nella cartella principale del repository. In questo modo github saprà che quella è la homepage e, quando avremo pubblicato il sito, saprà quale file visualizzare per primo._
 
-#### Lavorare collaborativamente su un repository git
+#### 4. Pubblicare il sito del progetto
 
-#### Link utili (alternativi)
+ 1. nella pagina principale del sito, cliccate sul bottone `Settings` (in alto a destra)
+
+ ![settings.png](img/settings.png)
+
+ 2. fate scrolling della pagina fino al seguente punto:
+
+ ![gitpages.png](img/gitpages.png)
+
+ 3. selezionate dalla lista `Select branch` la prima opzione `master branch`
+ 4. la pagina viene ricaricata. Tornate allo stesso punto dove trovate la seguente schermata:
+
+ ![pagedone.png](img/pagedone.png)
+
+ 5. Prendete nota della URL del sito web, che sarà nella seguente forma:
+ `https://[nome-utente].github.io/[nome-repository]/`
+
+ 6. cliccate sulla URL della vostra pagina web ora online :)
+
+Da ora in poi per modificare i contenuti del sito seguite le istruzioni riportate nella sezione 3 di questa introduzione, sostituendo i file da caricare su github con i file del vostro sito web.
+
+ * quando caricate file con lo stesso nome di file già esistenti nel repository questi verranno sostituiti
+ * quando caricate file non esistenti questi verranno creati sul repository
+ * per cancellare singoli file (caricati per errore o non più utili), dall'indice principale cliccate sul nome del file da cancellare e cliccate sull'icona (in alto a destra) con il bidone. Vi verrà chiesto di inserire la descrizione del commit (come già visto).
+
+_**ATTENZIONE** Questo sistema per il caricamento dei file semplifica molto le procedure, ma ha dei limiti, ovvero **non è possibile cancellare cartelle** tramite l'interfaccia del repository. Quindi scegliete con cura il nome delle cartelle prima di crearle e create solo quelle che vi servono (ovvero **img**, **css** ed eventualmente **js**)._
+
+_**ATTENZIONE (2) Non caricate una cartella contenente tutti i contenuti del sito** nel repository (e.g. "mio_sito" contenente "index.html"). Caricate direttamente i singoli file nella cartella principale del repository (e.g. solo "index.html")_
+
+![delete](img/delete.png)
+
+#### Link utili (alternativi a questa introduzione)
 1. [Come creare un account su github](https://www.wikihow.com/Create-an-Account-on-GitHub)
 
 2. [Come creare un repository e una pagina di progetto su github](https://pages.github.com/)
