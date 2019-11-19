@@ -1,5 +1,6 @@
 # Lezione 5
 
+
 ## La codifica del testo per il web
 
 La codifica del testo consente di creare un linguaggio condiviso tra l'uomo e la macchina affinchè quest'ultima possa _interpretare_ alcune semplici istruzioni sulla **struttura logica e l'aspetto dei contenuti** di un testo.
@@ -126,11 +127,15 @@ Guardiamo la struttura e la sintassi dei contenuti della pagina:
  3. Ogni documento HTML ha sempre un **nodo radice**, obbligatorio, ovvero l'elemento `html` che racchiude tutti gli altri elementi.
 
  N.B. In HTML esistono alcuni **elementi obbligatori** (`html`, `head`, `title` e `body`). Tutti gli altri dipendono dallo sviluppatore.
+
  4. Ogni elemento è composto da:
+
     1. un tag di apertura, e.g. `<html>`
     2. un tag di chiusura, e.g. `</html>`
     3. il valore dell'elemento.
+
  5. Il **valore** di un elemento può includere:
+ 
     1. altri elementi (`<section><p>...</p></section>`)
     2. semplice testo (`<p>autore: Andrea Bocelli</p>`)
     3. altri Elementi e testo (e.g. `<p>titolo: <i>Romanza</i></p>`)
