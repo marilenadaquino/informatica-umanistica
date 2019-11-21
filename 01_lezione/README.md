@@ -54,13 +54,13 @@ Per le lezioni laboratoriali (sotto indicate con [L]) *è richiesto l'utilizzo d
  3. [F] GIO 14.11.2019 - Communication Strategy
  4. [F] MAR 19.11.2019 - Architettura di una pagina Web
  5. [L] MER 20.11.2019 - HTML: blocchi logici
- 6. [F] GIO 21.11.2019 - Progettazione d’interfaccia
- 7. [L] MAR 26.11.2019 - HTML e CSS: stili per il template
- 8. [L] MER 27.11.2019 - CSS: font, colori, immagini e icone
- 9. [L] GIO 28.11.2019 - HTML and CSS: interazione utente
- 10. [L] MAR 3.12.2019 - Framework per la grafica: Bootstrap
- 11. [L] MER 4.12.2019 - HTML and CSS: ricapitoliamo
- 12. [L] GIO 5.12.2019 - Javascript: interazione utente 
+ 6. [F] GIO 21.11.2019 - HTML: blocchi logici
+ 7. [L] MAR 26.11.2019 - Progettazione d’interfaccia
+ 8. [L] MER 27.11.2019 - HTML e CSS: stili per il template
+ 9. [L] GIO 28.11.2019 - CSS: font, colori, immagini e icone
+ 10. [L] MAR 3.12.2019 - HTML and CSS: interazione utente
+ 11. [L] MER 4.12.2019 - Framework per la grafica: Bootstrap
+ 12. [L] GIO 5.12.2019 - HTML and CSS: ricapitoliamo 
  13. [L] MAR 10.12.2019 - Github e pubblicazione del sito web
  14. [L] MER 11.12.2019 - Discoverability e arricchimento
  15. [F] GIO 12.12.2019 - Q&A

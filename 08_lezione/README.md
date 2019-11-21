@@ -1,228 +1,173 @@
 # Lezione 8
 
-## CSS: alcune istruzioni
+## HTML e CSS
 
-#### 1. Colori
+I fogli di stile CSS sono file di testo che includono le istruzioni per la visualizzazione (i.e. la grafica) di elementi HTML.
 
-I colori possono essere applicati fondamentalmente a **tre oggetti** di una pagina web: testo (e.g. `p`, `section`, `nav ul li`, `i`, `a`), background (e.g. `body`, `section`) e bordi (`border`).
+Normalmente vengono salvati salvati con l’estensione `.css` in una sottocartella (i.e. allo stesso livello di index.html) chiamata css. Il file .css principale (possono essercene più di uno) è chiamato `style.css`.
 
-Per identificare un colore RGB si possono utilizzare (alternativamente e indifferentemente) **tre notazioni**: `nome valido`, `rgb (n,n,n)` e esadecimale `#alfanumerico`. Utilizziamo (tra i tanti disponibili online) il tool fornito da [Adobe color](https://color.adobe.com/it/) per scegliere e copiare gli identificativi dei colori scelti.
+~~~~
+sito_lezione7
+  |_ index.html
+  |_ css
+      |_ style.css
+~~~~
 
-N.B. Non tutti i colori hanno un `nome valido`.
+#### Richiamare un file CSS in un file HTML
+
+Per richiamare un file CSS in un file HTML, aggiungiamo un elemento `<link>` nell’elemento `<head>`. Il valore dell'attributo `@href` corrisponde al percorso parziale del file .css (ovvero il percorso che parte dal file .html in cui ci si trova e raggiunge il file .css)
 
 Per esempio:
 
-**Testo**
-
 ~~~~
-html {
- color: rgb(99,99,99);
-}
-
-header {
- color: white;
-}
+<head>
+  <title>La mia collezione di CD</title>
+  <link rel=”stylesheet” href=”css/style.css”>
+</head>
 ~~~~
 
-**Background**
+#### Richiamare elementi HTML in un file CSS
+
+Un file .css consiste in una serie di istruzioni che seguono la seguente sintassi:
 
 ~~~~
-body {
- background-color: white;
-}
-~~~~
-
-**Bordi**
-
-~~~~
-nav {
- border-bottom: solid 4px rgb(181,181,181);
+selettoreCSS {
+   nome-istruzione: valore-istruzione;
+   nome-istruzione2: valore-istruzione2;
+   ...
 }
 ~~~~
 
-#### 2. Font
+Per richiamare gli elementi del file html a cui si vuole applicare uno stile si utilizzano i **selettori CSS**:
 
-CSS permette di intervenire sulla scelta e la visualizzazione delle font in diversi modi. I computer hanno normalmente un set di font di default (e.g. Times New Roman, Arial) che possono essere utilizzati anche dal browser (quanti e quali dipende dai sistemi operativi, vedi [qui](https://www.w3.org/Style/Examples/007/fonts.en.html) una possibile lista).
-
-Buona pratica prevede di dichiarare una font di default per tutta la pagina html (i.e. applicata all'elemento `html`) e di dichiarare altre istruzioni per gli elementi specifici che avranno un'altra font.
-
-**Dichiarare una font family**
-
-Si dichiara il nome della font (presa da un vocabolario controllato) e un’alternativa in caso il browser dell'utente non possieda quella font. In questo secondo caso specifichiamo solo il tipo della font (e.g. `serif`, `sans-serif`)
-
-~~~~
-html {
-  font-family: "Georgia", serif;
-}
-
-h2, h3 {
-  font-family: "Arial", sans-serif;
-}
-~~~~
-
-**Grandezza dei caratteri**
-
-Le nuove tendenze in web design vogliono titoli molto grandi, testo spaziato e comunque grande, per facilitare la lettura.
-
-~~~~
-main {
- font-size: 1em;
- font-family: ‘Times’, serif;
-}
-~~~~
-
-**Interlinea**
-
-Buona pratica è mantenere un’interlinea proporzionata alla grandezza del font (misura in em).
-
-~~~~
-main {
- line-height: 1.5em;
-}
-~~~~
-
-**Spaziatura tra i caratteri**
-
-Buona pratica è spaziare le lettere nelle testate (titoli), utilizzando una misura proporzionale alla grandezza della font. La spaziatura tra le lettere peggiora invece la leggibilità nei testi lunghi (quindi non serve dichiararla).
-
-~~~~
-h2, h3 {
- letter-spacing: 0.05em;
-}
-~~~~
-
-**Applicare stili ad una font**
-
-Si può modificare l’aspetto di una font in diversi modi:
-
- * stile
-  ~~~~
-  h4 {
-     font-style: italic;
-  }
-  ~~~~
-
- * decorazione
-  ~~~~
-  a:hover {
-     text-decoration: underline;
-     font-weight:bold;
-  }
-  ~~~~
-
- * lower/uppercase
-  ~~~~
-  p::first-letter {
-      font-size: 5em;
-      color: rgb(181,181,181);
-      text-transform: uppercase;
-  }
-  ~~~~
-
-**Quali alternative ai font di default del mio coumputer?**
-
- 1. inserire i file di una font (di solito file in formato `.woff` o `.otf`) nella cartella del sito e _importare_ la font nel css (leggi [qui](https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website) per approfondire)
-
- 2. utilizzare link a font (open source) forniti da alcuni provider, e.g. [Google Fonts](https://fonts.google.com/).  Possiamo o _importare_ la font nel documento css o inserire un link nella pagina HTML (nell'elemento `head`).
-
-Per esempio, importiamo il font di Google chiamato `Roboto` nella pagina html.
-
-Selezioniamo la font (clicchiamo sul tasto `+` a destra del nome della font). Compare un tab in basso a destra, clicchiamo per espanderlo e leggiamo le istruzioni per l'_embedding_.
-
-![Roboto](roboto.png)
-
-Copiamo il link fornito (alla voce `STANDARD`) nel nostro documento html all'iterno dell'elemento `head` (l'ordine rispetto agli altri elementi in `head` non è rilevante, per semplicità mettiamolo prima della dichiarazione del nostro foglio di stile).
-
-~~~~
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-~~~~
-
-Leggiamo come dichiarare questa famiglia in CSS (voce `Specify in CSS`) e applichiamola agli elementi desiderati, e.g.
-
-~~~~
-nav {
-  font-family: 'Roboto', sans-serif;
-}
-~~~~
-
-#### 3. Immagini
-
-Le immagini sono tra gli oggetti più difficili da gestire, poichè si comportano diversamente dal testo con il cambiare della larghezza/altezza del device.
-
-Per consentire alle immagini di _scalare_ assieme alla grandezza del device usiamo immagini con le seguenti caratteristiche:
-
- * non servono immagini di eccessiva altà **qualità**, poichè questa è comunque limitata dalle prestazioni di visualizzazione dei browser (96ppi o 300ppi per i display retina)
- * non bisogna usare **file** di grandi dimensioni (in termini di KB o MB), poichè rallentano il caricamento della pagina da parte del browser
- * utilizziamo immagini tra i 1500 e i 2500 pixel di **larghezza**
-
-Normalmente le immagini per il web vengono **ottimizzate** utilizzando tool appositi, per scalare al variare della larghezza del device e non appesantire il caricamento della pagina. L'obiettivo è trovare un compromesso tra dimensioni del file e qualità dell'immagine. Tra i tool consigliati troviamo (Adobe Photoshop, Gimp, Paint.NET, GIFsicle, JPEGtran, JPEG Mini, OptiPNG, pngquant, FileOptimizer, ImageOptim, Trimage, ImageResize.org)
-
-![images weight per page](images.png)
-
-I **formati** consigliati sono `.jpg` (o `.jpeg`) e `.png` (generalmente di maggiore qualità ma più pesante). `.jpg` è preferibile per immagini con molti colori, `.png` per immagini con pochi colori.
-
-Per applicare stili alle immagini in CSS abbiamo diverse opzioni. Si può lavorare su altezza/larghezza (`height`, `width`) e influenzare il comportamento dell'immagine al variare della grandezza del device (`min-height`, `min-width`)
-
-~~~~
-img {
-  height: 20%;
-  width: auto;
-  max-width: 70%;
-  min-height:10%;
-}
-~~~~
-
-Leggi [questo articolo](https://www.w3schools.com/css/css3_images.asp) per saperne di più.
-
-#### 4. Icone
-
-Possiamo utilizzare icone per sostituire il testo in una serie di situazioni:
-
- * call to action, utilizzando un'immagine stilizzata che rappresenta l'azione che l'utente sta per compiere (e.g. search)
- * sostituire descrizioni (e.g. un lucchetto nel campo in cui va inserita una password)
- * stilizzazione di loghi (e.g. social)
-
-Le icone sono oggetti vettoriali che possono essere _inglobati_ in un font e pertanto comportarsi come un font - possiamo applicare stili ad una icona come se fosse un testo, e.g. colore, background, dimensione.
-
-[Fontawesome](https://fontawesome.com/start) fornisce un kit gratuito **online** di icone. Come per i font di Google fonts, potremo inserire un link al pacchetto di icone online nel file html e potremo inserire l'icona scelta nel punto deisderato.
-
-Come ottenere Fontawesome:
-
- * accedere a [Fontawesome](https://fontawesome.com/start) dal browser
- * inserire la propria email e cliccare su _Send kit_
- * aprire la email (controllare gli spam)
- * Premere sul bottone _click to confirm..._ e seguire il link
- * compiliamo i campi richiesti (password, nome, etc.) e clicchiamo sul bottone finale
- * veniamo rediretti in una pagina in cui troviamo in evidenza una istruzione come la seguente per inserire il link a Fontawesome nel documento html
-
-![Fontawesome](fontawesome.png)
-
- * guardiamo in alto nel menu e selezioniamo _icons_, in cui troviamo la gallery delle icone.
- * cerchiamo e selezioniamo l'icona che ci interessa. Veniamo rediretti alla pagina dedicata all'icona.
- * clicchiamo su _start using this icon_ e copiamo il codice in evidenza (vedi immagine sotto)
- * incolliamo il codice nel punto in cui vogliamo inserire l'icona
-
-![icon](icon.png)
-
-**Un caso speciale: Favicon**
-
-Il favicon (_favourite icon_) è quell'icona che troviamo nel tab del browser accanto al nome del sito web.
-Si tratta di una immagine motlo stilizzata, con estensione .ico, che rappresenta un elemento caratteristico del sito (e.g. un dettaglio del logo).
-
-Per creare favicon (disegnando a mano o importando imamgini) possiamo utilizzare tool online come [favicon.cc](https://www.favicon.cc/).
-
-Come procedere per inserire un favicon nel nostro sito:
-
- * caricare il file `favicon.ico` nella cartella principale del sito (dove abbiamo anche le pagine html)
- * inseriamo nel file html, nell'elemento `head` la seguente istruzione (simile ai link che abbiamo già visto)
+ * nome dell’elemento, applica uno stile a tutti gli elementi con quel nome
 
  ~~~~
- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ header { istruzioni }
+ section { istruzioni }
  ~~~~
 
-## CSS: colori, font, immagini e icone
+ * percorso (path) di un elemento, applica uno stile all’elemento indicato dal percorso
 
-Riprendiamo il template grafico:
+ ~~~~
+ nav ul li { istruzioni }
+ section p { istruzioni }
+ ~~~~
+
+ * elementi diversi contemporaneamente, applica uno stile a tutti gli elementi separati dalla virgola
+ ~~~~
+ h2, h3 { istruzioni }
+ ~~~~
+
+ * classe di un elemento, applica uno stile a tutti gli elementi il cui valore dell’attributo `@class` è specificato dal selettore
+
+ ~~~~
+ .valoreclasse { istruzioni }
+ ~~~~
+
+ * identificativo di un elemento, applica uno stile ad un solo elemento, avente quel valore dell’attributo `@id`
+
+ ~~~~
+ #valoreid { istruzioni }
+ ~~~~
+
+ * pseudoclassi, applica uno stile non ad una classe di elementi ma ad un’azione compiuta su un selettore
+
+ ~~~~
+ a:hover { istruzioni }
+ ~~~~
+
+## CSS: alcune istruzioni
+
+#### 1. Padding, margini, bordi e contenuto
+
+Margini, padding, bordi possono essere applicati a **blocchi logici** della pagina.
+
+Lo spazio nel web si può misurare in `px` (misura fissa), `%` (relativa all'elemento contenitore), `em` (relativa alla grandezza del font dell'elemento contenitore) e `rem` (relativa alla grandezza di default del font dell'elemento html)
+
+Il padding (spazio tra il contenuto e il bordo) può essere definito per ciascun lato del blocco di testo a cui viene applicato `padding-{lato}`
+
+~~~~
+padding-top: 5px;
+padding-bottom: 2%;
+padding-right: 1em;
+padding-left: 1em;
+~~~~
+
+oppure può essere applicato, in maniera sintetica a più lati contemporanemente utilizzando `padding`
+
+~~~~
+padding: 1em; /* applico a tutti i lati */
+padding: 16px 10px; /* applico 16px a top e bottom e 10px a left e right */
+padding: 16px 10px 16px 10px; /* applico stili in senso orario partendo da top */
+~~~~
+
+Il margine (spazio stra il bordo e l'elemento contenitore dell'elemento selezionato) può essere definito utilizzando `margin`
+
+~~~~
+margin-top: 5px;
+margin-bottom: 2%;
+margin-right: 1em;
+margin-left: 1em;
+
+margin: 1em;
+margin: 16px 10px;
+margin: 16px 10px 16px 10px;
+~~~~
+
+N.B. Quando abbiamo `margin: auto;` l'elemento (e il suo contenuto) viene centrato orizzontalmente nella pagina.
+
+
+Il bordo di un elemento è una linea (inizialmente invisibile) tra il padding e il margine. Per il bordo posso specificare il lato a cui applicarlo, lo spessore, il tipo di linea e il colore.
+
+~~~~
+border-top: solid 2px; /* linea continua spessa 2px solo in alto */
+border-bottom: dotted 2px; /* linea tratteggiata spessa 2px in basso */
+border: solid 5px grey; /* linea continua spessa 2px su tutti i lati, grigia */
+border:none; /* nessun bordo */
+border-radius: 50%; /* bordo con angoli arrotondati al 50% (un cerchio) */
+~~~~
+
+Il contenuto complessiovo di un elemento (che include contenuto testuale, padding, bordo, margine) può essere definito nella sua altezza e larghezza utilizzando le istruzioni `height` e `width`
+
+~~~~
+height: 30%;
+width: 100%;
+~~~~
+
+N.B. come calcolare la reale grandezza di un elemento?
+
+~~~~
+width = content + padding (left & right) + border (left & right) + margin (left & right)
+
+height = content + padding (top & bottom) + border (top & bottom) + margin (top & bottom)
+~~~~
+
+#### 2. Floating e allineamento
+
+L'istruzione `float` viene utilizzata per disporre elementi blocco all'interno di altri elementi blocco a destra o sinistra (e.g. dato un paragrafo e un'immagine all'interno di una sezione, voglio allineare l'immagine a sinistra del testo, non una dopo l'altro)
+
+Questa istruzione è molto utile per esempio per disporre le voci di menu in orizzontale
+
+~~~~
+nav ul li {
+  float: left;
+}
+~~~~
+
+
+
+## CSS: stili per il template
+
+**[BUONE PRATICHE]** Nel momento in cui si _implementa_ la grafica del sito in un file CSS bisogna avere a disposizione, in versione semi-definitiva, i seguenti file:
+
+ * i **contenuti** (testi e multimedia) che si vogliono inserire nelle pagine;
+ * il **documento HTML** in cui inserire quei contenuti;
+ * il **template grafico** che si vuole riprodurre
+
+Si comincia con gli stili per il template (**spazi e blocchi**) e si prosegue con colori, font, multimedia
+
+In questo laboratorio proviamo a riprodurre il seguente template grafico:
 
 ![screenshot1](screenshot1.png)
 ![screenshot2](screenshot2.png)
@@ -233,10 +178,24 @@ Una demo della pagina è disponibile [qui](https://templated.co/undeviating)
 
 Come procedere:
 
- 1. Apriamo in Sublime text il file HTML e CSS creati nella scorsa lezione
- 2. apriamo la pagina di [Adobe color](https://color.adobe.com/it/) sul browser, cerchiamo i colori del template e copiamo gli identificativi dei colori che abbiamo scelto.
- 3. applichiamo alcune istruzioni sul colore agli elementi HTML
- 4. apriamo Google Fonts, selezioniamo alcuni font che ci piacciono e li importiamo come specificato nella sezione precedente
- 5. dichiariamo la font-family e altre istruzioni per gli stili dei font agli elementi HTML
- 6. apriamo fontawesome e seguiamo le istruzioni per installare fontawesome. Cerchiamo poi sul sito Fontawesome le icone che compaiono nel template e copiamo gli snippet nel nostro codice nei punti adeguati
- 7. applichiamo degli stili alle nostre icone (colori, posizionamento e floating)
+ 1. creiamo una cartella in cui inserire i file del nostro sito, e.g. `sito_lezione7`
+ 2. apriamo Sublime Text e creare un nuovo file vuoto
+ 3. salviamo il file nella cartella scelta nominandolo `index.html`
+ 4. inseriamo nel file `index.html` gli elementi **obbligatori** (`<!doctype html>`, `html`, `head`, `body`)
+ 5. utilizzando il template grafico fornito, inseriamo gli elementi html che sembrano più appropriati per rappresentare i **blocchi logici** della pagina (e.g. `title`, `header`, `nav`, `main`, `footer`, etc.)
+ 6. inseriamo all'interno dei blocchi logici altri elementi contenitori (e.g. `ul`, `li`, `h1`, `section`, `p`)
+ 7. inseriamo le voci di menu (`a`) negli elementi appropriati (per il momento _non creiamo_ le pagine html corrispondenti)
+ 8. inserire negli elementi appropriati alcuni **contenuti** (per il momento _non inseriamo_ icone e bottoni)
+
+Finita la versione semi-definitiva della pagina HTML, passiamo a CSS.
+
+Come procedere:
+
+ 1. creiamo una sottocartella chiamata `css` nella cartella `sito_lezione7`
+ 2. torniamo su Sublime Text e creiamo un nuovo file vuoto
+ 3. salviamo il file nella cartella `css` chiamandolo `style.css`
+ 4. torniamo al nostro file html e inseriamo nell'elemtno `head` il `link` al nostro file `style.css` (vedi sopra)
+ 5. individuiamo nel file html a quali elementi vanno associate delle **classi** (e.g. elementi multipli che si comportano nello stesso modo o che vanno visualizzati nello stesso modo), degli **identificativi** (e.g. elementi a cui andranno associate delle istruzioni CSS specifiche unicamente per loro) o niente (elementi che sono comunque unici nella pagina, e.g. `footer` )
+ 6. andiamo nel file css e iniziamo a inserire qualche istruzione relativa agli **spazi** (margini, padding, floating).
+
+**[DISCLAIMER]** L'ordine delle istruzioni in un file css _normalmente_ non è rilevante (e.g. posso inserire istruzioni per `footer` e successivamente per `nav`). L'ordine diventa importante quando un'istruzione **influenza o contraddice** un'altra istruzione (in questo caso l'ultima vince!).

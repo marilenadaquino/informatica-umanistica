@@ -1,281 +1,242 @@
 # Lezione 9
 
-## HTML and CSS: interazione utente
+## CSS: alcune istruzioni
 
-**Interaction design** è lo studio del comportamento degli elementi di una pagina web (e.g. link, bottoni, immagini) e l'analisi del comportamento dell'utente mentre interagisce con tali elementi.
+#### 1. Colori
 
-CSS3 permette di applicare stili a elementi della pagina per modificare il **comportamento** che questi hanno durante l'interazione con l'utente.
+I colori possono essere applicati fondamentalmente a **tre oggetti** di una pagina web: testo (e.g. `p`, `section`, `nav ul li`, `i`, `a`), background (e.g. `body`, `section`) e bordi (`border`).
 
-In particolare, CSS3 offre **Pseudo-classi** e **Pseudo-elementi** per:
+Per identificare un colore RGB si possono utilizzare (alternativamente e indifferentemente) **tre notazioni**: `nome valido`, `rgb (n,n,n)` e esadecimale `#alfanumerico`. Utilizziamo (tra i tanti disponibili online) il tool fornito da [Adobe color](https://color.adobe.com/it/) per scegliere e copiare gli identificativi dei colori scelti.
 
- * interagire con elementi prima/durante/dopo un evento (e.g. click del mouse, hover su un link)
- * intervenire su aspetti particolari di elementi che non possono essere strutturati in altri elementi HTML (e.g. la prima lettera di una parola, righe pari/dipasri di una tabella, etc.).
+N.B. Non tutti i colori hanno un `nome valido`.
 
+Per esempio:
 
-### Interazione per l'orientamento dell'utente
-
-La _pseudo-classe_ più utilizzata nel web è `:hover`, è permette di modificare il comportamento di un elemento quando il mouse vi passa sopra (senza cliccare). Un esempio comune è il comportamento dei link.
-
-![hover](hover.png)
-
-Un utente che passa il cursore su un elemento del menu di navigazione si aspetta un comportamento diverso rispetto al testo che lo circonda, tale da permettergli di capire che quello è un elemento interattivo.
-
-Sui link è possibile intervenire in 4 momenti:
-
- * `a:link` - un link mai visitato
- * `a:visited` - un link già visitato dall'utente
- * `a:hover` - un link quando il mouse vi passa sopra
- * `a:active` - un link nel momento in cui viene cliccato
-
-In un foglio di stile css, è fondamentale mantenere **l'ordine di queste istruzioni**.
-
-Gli aspetti su cui intervenire nel comportamento di un link sono, generalmente i seguenti (uno o più contemporaneamente):
-
- * colore del testo
- ~~~~
- a:link {color: blue;}
- a:visited {color: violet;}
- ~~~~
- * stile del font
- ~~~~
- a:hover {font-style: bold;}
- ~~~~
- * decorazione
- ~~~~
- a:hover {text-decoration: underline;}
- ~~~~
- * background
- ~~~~
- a:hover {background-color: white;}
- ~~~~
-
-NB. su device medio-piccoli (tablet, mobile), dove il mouse non viene utilizzato, i comportamenti relativi all'over del mouse scompaiono o vengono sostituiti con comportamenti diversi (e.g. il solo click). Pertanto, non si implementano mai comportamenti legati **solo**  all'over, ma si studiano comportamenti che possono essere applicati anche al click.
-
-
-In ultimo, per orientare l'utente è sempre bene **evidenziare** nel menu di navigazione la pagina in cui l'utente si trova in quel momento, applicando stili diversi all'elemento del menu corrispondente.
-
-Ad esempio:
+**Testo**
 
 ~~~~
-<!-- index.html -->
-<nav>
-  <ul>
-      <li><a href="#" class="active">HOME</a></li>
-      <li><a href="clients.html">OUR CLIENTS</a></li>
-      <li><a href="about.html">ABOUT US</a></li>
-  </ul>
-</nav>
-~~~~
+html {
+ color: rgb(99,99,99);
+}
 
-Applichiamo stili alla classe `.active` che abbiamo attribuito al link della pagina in cui ci troviamo.
-~~~~
-a.active {
-  background-color: white;
-  color: blue;
+header {
+ color: white;
 }
 ~~~~
 
-Al cambiare della pagina cambieremo l'elemento a cui attribuiamo la classe `.active`.
-
-~~~~
-<!-- about.html -->
-<nav>
-  <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="#" class="active">OUR CLIENTS</a></li>
-      <li><a href="about.html">ABOUT US</a></li>
-  </ul>
-</nav>
-~~~~
-
-**Un caso speciale: Breadcrumbs**
-
-In siti complessi (con molte pagine o diversi raggruppamenti/categorizzazioni delle stesse pagine, e.g. magazine online) la navigazione del sito necessita ulteriori mezzi per l'orientamento dell'utente. In tali casi, i menu di navigazione primaria vengono affiancati da ulteriori forme di navigazione dei contenuti, chiamate _briciole di pane_.
-
-~~~~
-<!-- about.html -->
-<nav>...</nav>
-...
-<section class="breadcrumb">
-  About / <a href="#gallery">Gallery</a> / <a href="#pictures_of_us">pictures of us</a>
-</section>
-~~~~
-
-Che in un browser apparirà come segue:
-
-About / <a href="#gallery">Gallery</a> / <a href="#pictures_of_us">pictures of us</a>
-
----
-
-Sempre ai fini dell'orientamento dell'utente all'interno della pagina, è possibile applicare degli stili ad alcuni **punti specifici di un elemento** (e.g. di un paragrafo, di una parola, di una tabella) per migliorare la leggibilità e indirizzare l'occhio dell'utente. In questo caso si utilizzano gli _pseudo-elementi_.
-
-Di seguito alcuni esempi utili:
-~~~~
-p::first-line {
-  font-style: bold; /* la prima linea di ogni paragrafo */
-}
-
-p::first-letter {
-  font-size: 5em; /* la prima lettera di ogni paragrafo */
-}
-section.search::before {
-  content: "search: "; /* aggiunge un testo all'interno dell'elemento section, prima del contenuto HTML */
-}
-
-section.intro::after {
-  content: "read more... "; /* aggiunge un testo all'interno dell'elemento section, alla fine del contenuto HTML */
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2; /* applica un colore diverso a tutte le righe pari di una tabella */
-}
-~~~~
-
-NB. è possibile inserire anche delle **icone** utilizzando gli pseudo-elementi `::before` e `::after`. Le icone sono infatti oggetti vettoriali che possono essere identificati da codici.
-
-~~~~
-section.search::before {
-  content: "\f002" ; /* aggiunge un'icona con la lente d'ingrandimento */
-}
-~~~~
-
-Vedi [una lista di codici per le icone Fontawesome](https://astronautweb.co/snippet/font-awesome/).
-
-### Esplorazione
-
-Elementi interattivi possono agevolare non solo l'orientamento ma favorire l'esplorazione dei contenuti in maniera progressiva (e.g. _progressive disclosure_).
-
-Per esempio, all'interno di una galleria di **immagini**, per evitare che l'utente sia visivamente disorientato dalle troppe immagini o dai colori intensi, si possono applicare **filtri**, opacizzando le immagini.
-
-Ad esempio:
-~~~~
-img {
-  opacity: 0.5;
-}
-
-img:hover {
-  opacity: 1.0;
-}
-~~~~
-
-Viceversa, è possibile opacizzare maggiormente un'immagine al passaggio del mouse e visualizzare una didascalia.
-
-Vedi [alcuni esempi](https://www.w3schools.com/css/css_image_transparency.asp).
-
-Altri casi di esplorazione dei contenuti sfruttano lo **_scrolling_** (scorrimento verso il basso/alto) della pagina.
-
-N.B. i link non rimandano per forza ad un'altra pagina, ma possono rimandare a punti specifi della pagina web in cui ci si trova. Per fare ciò si utilizzano gli attributi `@id` per identificare il punto di arrivo (e.g. un titolo all'inizio di una sezione), e l'attributo `@href` per linkare uno o più punti di partenza al punto di arrivo.
-
-Ad esempio:
-
-~~~~
-<!-- about.html -->
-<p>Vedi la <a href="#approfondimento">sezione successiva</a> per approfondimenti</p>
-
-...
-
-<section>
-  <h2 id="approfondimento">Dicevamo...</h2>
-  <p>...</p>
-</section>
-~~~~
-
-**Transizioni e animazioni**
-
-Negli esempi visti, il passaggio da un livello di opacità ad un altro (nel caso delle immagini), il cambio di colore del background (nel caso dei link), o il cambio di colore del testo avviene repentinamente. Si possono effettuare delle **trasformazioni** (e.g. rotazioni), applicare effetti alle **transizioni** (stabilendo la durata e il tipo di effetto), andando a creare vere e proprie **animazioni**.
-
-~~~~
-
-img {
-  opacity: 0.5;
-  transition: opacity .25s ease-in-out;
-}
-
-img:hover {
-  opacity: 1.0;
-}
-
-p {
-  transform: rotate(20deg); /* ruota un paragrafo di 20 gradi, non dipende da alcun evento */
-}
-
-section {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 2s; /* transizione sulla proprietà width di durata 2s */
-}
-
-section:hover {
-  width: 300px; /* risultato finale della transizione, che avviene solo in caso di mouse over */
-}
-~~~~
-
-Vedi [un esempio](https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition1)
-
-Nel caso dello **scrolling** il movimento da un elemento ad un altro è repentino. Si può renderlo più elegante e _smooth_ utilizzando una proprietà apposita
+**Background**
 
 ~~~~
 body {
-  scroll-behavior: smooth;
+ background-color: white;
 }
 ~~~~
 
-### Azioni
-
-Oltre ai link, i **bottoni** mutano comportamento durante l'interazione con l'utente. Questi, rispetto ai semplici link che rimandano l'utente in un'altra pagina o punto della pagina, permettono agli utenti di compiere delle azioni (e.g. effettuare ricerche, visualizzare risultati).
+**Bordi**
 
 ~~~~
-span.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-span.button1:hover {
-  background-color: black; /* il bottone cambia background e colore testo con una transizione di 0.4 secondi */
-  color: white;
+nav {
+ border-bottom: solid 4px rgb(181,181,181);
 }
 ~~~~
 
-Vedi [alcuni esempi](https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_hover)
+#### 2. Font
 
+CSS permette di intervenire sulla scelta e la visualizzazione delle font in diversi modi. I computer hanno normalmente un set di font di default (e.g. Times New Roman, Arial) che possono essere utilizzati anche dal browser (quanti e quali dipende dai sistemi operativi, vedi [qui](https://www.w3.org/Style/Examples/007/fonts.en.html) una possibile lista).
 
-### Altri esempi
+Buona pratica prevede di dichiarare una font di default per tutta la pagina html (i.e. applicata all'elemento `html`) e di dichiarare altre istruzioni per gli elementi specifici che avranno un'altra font.
 
-Esistono altre tipologie di comportamenti (più sofisticate) che favoriscono l'interazione con l'utente, per esempio:
+**Dichiarare una font family**
 
- * dropdown
- * tooltip
- * sliders
- * mappe interattive
- * carousel di immagini
- * autosuggest, as-you-type results
- * paginazione dei risultati
+Si dichiara il nome della font (presa da un vocabolario controllato) e un’alternativa in caso il browser dell'utente non possieda quella font. In questo secondo caso specifichiamo solo il tipo della font (e.g. `serif`, `sans-serif`)
 
-Molte di queste tipologie richiedono istruzioni CSS più complesse o l'utilizzo di Javascript per modificare il comportamento di default degli elementi della pagina.
+~~~~
+html {
+  font-family: "Georgia", serif;
+}
 
-Nelle prossime lezioni vedremo:
+h2, h3 {
+  font-family: "Arial", sans-serif;
+}
+~~~~
 
- * l'utilizzo di **librerie CSS** ([Bootstrap](https://getbootstrap.com/)) per ottenere effetti anche molto complessi utilizzando solo poche righe di codice
- * l'utilizzo di un linguaggio di programmazione **Javascript** per modificare il comportamento degli elementi della pagina HTML
+**Grandezza dei caratteri**
 
+Le nuove tendenze in web design vogliono titoli molto grandi, testo spaziato e comunque grande, per facilitare la lettura.
 
-## CSS: interazione utente
+~~~~
+main {
+ font-size: 1em;
+ font-family: ‘Times’, serif;
+}
+~~~~
+
+**Interlinea**
+
+Buona pratica è mantenere un’interlinea proporzionata alla grandezza del font (misura in em).
+
+~~~~
+main {
+ line-height: 1.5em;
+}
+~~~~
+
+**Spaziatura tra i caratteri**
+
+Buona pratica è spaziare le lettere nelle testate (titoli), utilizzando una misura proporzionale alla grandezza della font. La spaziatura tra le lettere peggiora invece la leggibilità nei testi lunghi (quindi non serve dichiararla).
+
+~~~~
+h2, h3 {
+ letter-spacing: 0.05em;
+}
+~~~~
+
+**Applicare stili ad una font**
+
+Si può modificare l’aspetto di una font in diversi modi:
+
+ * stile
+  ~~~~
+  h4 {
+     font-style: italic;
+  }
+  ~~~~
+
+ * decorazione
+  ~~~~
+  a:hover {
+     text-decoration: underline;
+     font-weight:bold;
+  }
+  ~~~~
+
+ * lower/uppercase
+  ~~~~
+  p::first-letter {
+      font-size: 5em;
+      color: rgb(181,181,181);
+      text-transform: uppercase;
+  }
+  ~~~~
+
+**Quali alternative ai font di default del mio coumputer?**
+
+ 1. inserire i file di una font (di solito file in formato `.woff` o `.otf`) nella cartella del sito e _importare_ la font nel css (leggi [qui](https://www.pagecloud.com/blog/how-to-add-custom-fonts-to-any-website) per approfondire)
+
+ 2. utilizzare link a font (open source) forniti da alcuni provider, e.g. [Google Fonts](https://fonts.google.com/).  Possiamo o _importare_ la font nel documento css o inserire un link nella pagina HTML (nell'elemento `head`).
+
+Per esempio, importiamo il font di Google chiamato `Roboto` nella pagina html.
+
+Selezioniamo la font (clicchiamo sul tasto `+` a destra del nome della font). Compare un tab in basso a destra, clicchiamo per espanderlo e leggiamo le istruzioni per l'_embedding_.
+
+![Roboto](roboto.png)
+
+Copiamo il link fornito (alla voce `STANDARD`) nel nostro documento html all'iterno dell'elemento `head` (l'ordine rispetto agli altri elementi in `head` non è rilevante, per semplicità mettiamolo prima della dichiarazione del nostro foglio di stile).
+
+~~~~
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+~~~~
+
+Leggiamo come dichiarare questa famiglia in CSS (voce `Specify in CSS`) e applichiamola agli elementi desiderati, e.g.
+
+~~~~
+nav {
+  font-family: 'Roboto', sans-serif;
+}
+~~~~
+
+#### 3. Immagini
+
+Le immagini sono tra gli oggetti più difficili da gestire, poichè si comportano diversamente dal testo con il cambiare della larghezza/altezza del device.
+
+Per consentire alle immagini di _scalare_ assieme alla grandezza del device usiamo immagini con le seguenti caratteristiche:
+
+ * non servono immagini di eccessiva altà **qualità**, poichè questa è comunque limitata dalle prestazioni di visualizzazione dei browser (96ppi o 300ppi per i display retina)
+ * non bisogna usare **file** di grandi dimensioni (in termini di KB o MB), poichè rallentano il caricamento della pagina da parte del browser
+ * utilizziamo immagini tra i 1500 e i 2500 pixel di **larghezza**
+
+Normalmente le immagini per il web vengono **ottimizzate** utilizzando tool appositi, per scalare al variare della larghezza del device e non appesantire il caricamento della pagina. L'obiettivo è trovare un compromesso tra dimensioni del file e qualità dell'immagine. Tra i tool consigliati troviamo (Adobe Photoshop, Gimp, Paint.NET, GIFsicle, JPEGtran, JPEG Mini, OptiPNG, pngquant, FileOptimizer, ImageOptim, Trimage, ImageResize.org)
+
+![images weight per page](images.png)
+
+I **formati** consigliati sono `.jpg` (o `.jpeg`) e `.png` (generalmente di maggiore qualità ma più pesante). `.jpg` è preferibile per immagini con molti colori, `.png` per immagini con pochi colori.
+
+Per applicare stili alle immagini in CSS abbiamo diverse opzioni. Si può lavorare su altezza/larghezza (`height`, `width`) e influenzare il comportamento dell'immagine al variare della grandezza del device (`min-height`, `min-width`)
+
+~~~~
+img {
+  height: 20%;
+  width: auto;
+  max-width: 70%;
+  min-height:10%;
+}
+~~~~
+
+Leggi [questo articolo](https://www.w3schools.com/css/css3_images.asp) per saperne di più.
+
+#### 4. Icone
+
+Possiamo utilizzare icone per sostituire il testo in una serie di situazioni:
+
+ * call to action, utilizzando un'immagine stilizzata che rappresenta l'azione che l'utente sta per compiere (e.g. search)
+ * sostituire descrizioni (e.g. un lucchetto nel campo in cui va inserita una password)
+ * stilizzazione di loghi (e.g. social)
+
+Le icone sono oggetti vettoriali che possono essere _inglobati_ in un font e pertanto comportarsi come un font - possiamo applicare stili ad una icona come se fosse un testo, e.g. colore, background, dimensione.
+
+[Fontawesome](https://fontawesome.com/start) fornisce un kit gratuito **online** di icone. Come per i font di Google fonts, potremo inserire un link al pacchetto di icone online nel file html e potremo inserire l'icona scelta nel punto deisderato.
+
+Come ottenere Fontawesome:
+
+ * accedere a [Fontawesome](https://fontawesome.com/start) dal browser
+ * inserire la propria email e cliccare su _Send kit_
+ * aprire la email (controllare gli spam)
+ * Premere sul bottone _click to confirm..._ e seguire il link
+ * compiliamo i campi richiesti (password, nome, etc.) e clicchiamo sul bottone finale
+ * veniamo rediretti in una pagina in cui troviamo in evidenza una istruzione come la seguente per inserire il link a Fontawesome nel documento html
+
+![Fontawesome](fontawesome.png)
+
+ * guardiamo in alto nel menu e selezioniamo _icons_, in cui troviamo la gallery delle icone.
+ * cerchiamo e selezioniamo l'icona che ci interessa. Veniamo rediretti alla pagina dedicata all'icona.
+ * clicchiamo su _start using this icon_ e copiamo il codice in evidenza (vedi immagine sotto)
+ * incolliamo il codice nel punto in cui vogliamo inserire l'icona
+
+![icon](icon.png)
+
+**Un caso speciale: Favicon**
+
+Il favicon (_favourite icon_) è quell'icona che troviamo nel tab del browser accanto al nome del sito web.
+Si tratta di una immagine motlo stilizzata, con estensione .ico, che rappresenta un elemento caratteristico del sito (e.g. un dettaglio del logo).
+
+Per creare favicon (disegnando a mano o importando imamgini) possiamo utilizzare tool online come [favicon.cc](https://www.favicon.cc/).
+
+Come procedere per inserire un favicon nel nostro sito:
+
+ * caricare il file `favicon.ico` nella cartella principale del sito (dove abbiamo anche le pagine html)
+ * inseriamo nel file html, nell'elemento `head` la seguente istruzione (simile ai link che abbiamo già visto)
+
+ ~~~~
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ ~~~~
+
+## CSS: colori, font, immagini e icone
 
 Riprendiamo il template grafico:
 
 ![screenshot1](screenshot1.png)
 ![screenshot2](screenshot2.png)
 
-1. Apriamo in Sublime text il file HTML e CSS creati nella scorsa lezione
-2. Modifichiamo il comportamento dei link nel menu (colore, background, hover, link pagina attiva)
-3. Modifichiamo l'opacità dell'immagine e modifichiamo l'effetto di transizione
-4. Creiamo dei link all'interno della stessa pagina e modifichiamo l'effetto dello scrolling
-5. Inseriamo i bottoni e applichiamo degli stili per definirne il comportamento
+Una demo della pagina è disponibile [qui](https://templated.co/undeviating)
 
+**[DISCLAIMER]** Si possono modificare i contenuti, i colori e le icone a piacere, rispettando comunque il template.
 
-### Link utili
-Per una lista completa di pseudo-classi e pseudo-elementi con esempi interattivi, vedi la pagina dedicata del [w3school](https://www.w3schools.com/css/css_pseudo_elements.asp)
+Come procedere:
+
+ 1. Apriamo in Sublime text il file HTML e CSS creati nella scorsa lezione
+ 2. apriamo la pagina di [Adobe color](https://color.adobe.com/it/) sul browser, cerchiamo i colori del template e copiamo gli identificativi dei colori che abbiamo scelto.
+ 3. applichiamo alcune istruzioni sul colore agli elementi HTML
+ 4. apriamo Google Fonts, selezioniamo alcuni font che ci piacciono e li importiamo come specificato nella sezione precedente
+ 5. dichiariamo la font-family e altre istruzioni per gli stili dei font agli elementi HTML
+ 6. apriamo fontawesome e seguiamo le istruzioni per installare fontawesome. Cerchiamo poi sul sito Fontawesome le icone che compaiono nel template e copiamo gli snippet nel nostro codice nei punti adeguati
+ 7. applichiamo degli stili alle nostre icone (colori, posizionamento e floating)

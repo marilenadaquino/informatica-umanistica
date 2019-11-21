@@ -1,4 +1,4 @@
-# Lezione 5
+# Lezione 5 e 6
 
 
 ## La codifica del testo per il web
