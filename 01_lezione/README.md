@@ -60,10 +60,10 @@ Per le lezioni laboratoriali (sotto indicate con [L]) *è richiesto l'utilizzo d
  9. [L] GIO 28.11.2019 - HTML and CSS: interazione utente
  10. [L] MAR 3.12.2019 - Framework per la grafica: Bootstrap
  11. [L] MER 4.12.2019 - HTML and CSS: ricapitoliamo
- 12. [L] GIO 5.12.2019 - Javascript: interazione utente (Bootstrap, JQuery)
+ 12. [L] GIO 5.12.2019 - Javascript: interazione utente 
  13. [L] MAR 10.12.2019 - Github e pubblicazione del sito web
- 14. [L] MER 11.12.2019 - Discoverability e arricchimento (social, widgets, SEO, metadatazione, analytics)
- 15. [F] 12.12.2019 - Q&A
+ 14. [L] MER 11.12.2019 - Discoverability e arricchimento
+ 15. [F] GIO 12.12.2019 - Q&A
 
 ## Il progetto
 
