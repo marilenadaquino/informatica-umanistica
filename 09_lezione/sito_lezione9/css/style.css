@@ -1,0 +1,102 @@
+/* space */
+
+body {
+   margin: 0;
+}
+
+header,main,footer, .contact_container {
+  padding: 10% 5% 2% 5%;
+  text-align: center;
+}
+
+nav {
+  padding-top: 2em;
+  height: 3em;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 2em;
+}
+
+.main_section {
+  padding: 5% 0px;
+  border-bottom: solid 1px grey;
+}
+
+#no_border {
+  border: none;
+}
+
+.block_3 , .contact{
+  width: 30%;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.block_4 {
+  width: 22%;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+/* colors and font */
+
+body {
+  color: rgba(0,0,0,.6);
+  font-family: 'Questrial', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 1.5em;
+}
+
+header , footer {
+  background-color: #2056ac;
+  color:white;
+}
+
+.block_4 {
+  font-size: 1rem;
+}
+
+.contact_container {
+  background-color: lightblue;
+}
+
+button {
+  background-color: #64ABD1;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  font-size: 1.1em;
+  letter-spacing: 0.02em;
+}
+
+/* icon */
+
+.fa-cog {
+  font-size: 3em;
+}
+
+/* links*/
+
+a {
+  color: white;
+}
+
+/* a:hover {
+  text-decoration: underline;
+}
+
+nav ul li:hover a {
+  background: #FFF;
+  border-radius: 7px 7px 0px 0px;
+  color: #2056ac;
+} */
