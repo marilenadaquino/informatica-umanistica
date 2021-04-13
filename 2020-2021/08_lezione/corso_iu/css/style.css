@@ -1,0 +1,16 @@
+nav ul li {
+  display: inline;
+  margin: 20px;
+}
+
+nav ul li {text-align: center;}
+
+header { 
+	padding: 5em;
+	text-align: center;
+}
+
+h1 {
+	padding: 2em;
+}
+
