@@ -3,19 +3,22 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+nav ul {
+  margin-bottom: 0px !important;
+}
+
 nav ul li {
   display: inline-block;
-  margin: 20px;
+  padding: 20px;
 }
 
 nav ul li {text-align: center;}
 
 header {
-	padding: 3em;
+	padding: 3em 3em 0px 3em;
 	text-align: center;
   background-color: #4F138F;
   color: white;
-  background-image: url('../img/raccoonicorn.jpg');
 }
 
 h1 {
@@ -42,4 +45,12 @@ section, footer {
   margin-right: auto;
   width: 70%;
 
+}
+
+nav ul li.active {
+  background-color: white;
+}
+
+nav ul li.active a {
+  color: #4F138F;
 }
