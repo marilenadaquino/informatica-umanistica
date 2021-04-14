@@ -35,9 +35,7 @@ Se si vuole incollare un testo precedentemente copiato o tagliato in un punto sp
 **Windows** Ctrl + v
 
 
-
-
-## Fare uno screenshot
+## Fare uno screenshot
 
 **Mac**
 
