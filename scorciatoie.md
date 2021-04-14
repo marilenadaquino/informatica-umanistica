@@ -35,6 +35,8 @@ Se si vuole incollare un testo precedentemente copiato o tagliato in un punto sp
 **Windows** Ctrl + v
 
 
+
+
 ## Fare uno screenshot
 
 **Mac**
@@ -42,7 +44,7 @@ Se si vuole incollare un testo precedentemente copiato o tagliato in un punto sp
  * Command + shift + 3 (per fare una foto a tutto lo schermo)
  * Command + shift + 4 (per far comparire il puntatore e selezionare quale parte della pagina si vuole fotografare)
 
-Gli screenshot vengono salvati sul desktop (nome: "Screnshot data ora.png")
+Gli screenshot vengono salvati sul desktop (nome: "Screenshot data ora.png")
 
 **Windows**
 
