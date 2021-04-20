@@ -1,6 +1,12 @@
 body {
   margin: 0px !important;
-  font-family: 'Roboto', sans-serif;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+button {
+  
 }
 
 nav ul {
@@ -53,4 +59,16 @@ nav ul li.active {
 
 nav ul li.active a {
   color: #4F138F;
+}
+
+p {
+  font-size: 1.3em;
+  letter-spacing: 0.02em;
+}
+
+@media only screen and (max-width: 575.98px) {
+
+  nav ul {padding-left: 0px ;}
+  nav ul li { display: block ; }
+
 }
