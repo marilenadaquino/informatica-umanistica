@@ -7,7 +7,7 @@
  - [x] un **sito web**, contenente _almeno_
     * 1 homepage (index.html)
     * 1 pagina di documentazione del progetto (comevipare.html) che
-    include tutte le informazioni descritte in [template](../template_documentazione.md) e che rispetta i limiti di parole
+    include tutte le informazioni descritte in [template](https://github.com/marilenadaquino/informatica-umanistica/blob/master/template_documentazione.md) e che rispetta i limiti di parole
     * 1 foglio di stile (comevipare.css)
 
  - [x] preparare una **presentazione (orale o powerpoint)** di _max 10 minuti_, e.g.
