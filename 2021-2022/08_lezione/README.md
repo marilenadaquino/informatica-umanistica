@@ -147,15 +147,23 @@ height = content + padding (top & bottom) + border (top & bottom) + margin (top 
 
 L'istruzione `float` viene utilizzata per disporre elementi blocco all'interno di altri elementi blocco a destra o sinistra (e.g. dato un paragrafo e un'immagine all'interno di una sezione, voglio allineare l'immagine a sinistra del testo, non una dopo l'altro)
 
-Questa istruzione è molto utile per esempio per disporre le voci di menu in orizzontale
-
 ~~~~
 nav ul li {
   float: left;
 }
 ~~~~
 
+In alternativa, possiamo alterare il comportamento di elementi blocco trasformandoli in elementi inline o, ancora meglio, rimanendo elementi blocco che si comportano come elementi inline.
 
+~~~~
+nav ul li {
+  display: inline-block;
+}
+~~~~
+
+Questa istruzione è molto utile per esempio per disporre le voci di menu in orizzontale.
+
+NB. un elemento inline non ha padding e margin, mentre un elemento blocco, o inline-block, può avere padding e margin.
 
 ## CSS: stili per il template
 
