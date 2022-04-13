@@ -1,0 +1,34 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 5% 5% 0px 5%;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0px !important;
+}
+
+nav ul li {
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-transform: uppercase;
+}
+
+.whitelink {
+  text-decoration: none;
+}
+
+#homeimage {
+  max-width: 50%;
+  margin: 40px 25%;
+}
