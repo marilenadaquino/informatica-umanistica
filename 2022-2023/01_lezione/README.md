@@ -49,7 +49,9 @@ Ai fini del corso non è richiesto l'utilizzo di alcun software o linguaggio pro
  - [Sublime Text 2, portable version](https://www.sublimetext.com/2) - Rich text editor da scaricare gratuitamente (**ATTENZIONE** Sublime Text 3 è a pagamento e non è necessario)
  - [Github](https://github.com/) - Piattaforma (repository) per pubblicare codice open source. Consente di pubblicare pagine web gratuitamente.
 
-**La scelta dell'editor e della piattaforma per la pubblicazione del sito web sono a discrezione dello studente.** Gli strumenti sopra menzionati sono stati scelti per la loro facilità di utilizzo, ma non sono obbligatori.
+La scelta dell'editor e della piattaforma per la pubblicazione del sito web sono a discrezione dello studente. Gli strumenti sopra menzionati sono stati scelti per la loro facilità di utilizzo, ma non sono obbligatori.
+
+**Per gli studenti con Mac OS**, in caso di problemi nell'installazione di Sublime Text, alternativa: [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Modalità di svolgimento delle lezioni
 
@@ -79,19 +81,19 @@ Il calendario delle lezioni:
 
 1a settimana
  1. [F] LUN 20.03.2023 (h17-19) - Presentazione del corso, AULA B (Accesso da Via Zamboni, 34)
- 2. [F] MAR 21.03.2023 (h13-15) - Project management Plan, AULA D (Accesso da Via Zamboni, 34)
+ 2. [F] MAR 21.03.2023 (h15-17) - Project management Plan, AULA D (Accesso da Via Zamboni, 34)
  3. [F] MER 22.03.2023 (h9-11) - Communication Strategy, AULA B (Accesso da Via Zamboni, 34)
 
 2a settimana
 
  4. [F] LUN 27.03.2023 (h17-19) - Architettura di una pagina Web, AULA B (Accesso da Via Zamboni, 34)
- 5. [L] MAR 28.03.2023 (h13-15) - HTML: blocchi logici, AULA D (Accesso da Via Zamboni, 34)
+ 5. [L] MAR 28.03.2023 (h15-17) - HTML: blocchi logici, AULA D (Accesso da Via Zamboni, 34)
  6. [F] MER 29.03.2023 (h9-11) - HTML: blocchi logici, AULA B (Accesso da Via Zamboni, 34)
 
 3a settimana
 
  7. [L] LUN 3.04.2023 (h17-19) - Progettazione d’interfaccia, AULA B (Accesso da Via Zamboni, 34)
- 8. [L] MAR 4.04.2023 (h13-15) - HTML e CSS: stili per il template, AULA D (Accesso da Via Zamboni, 34)
+ 8. [L] MAR 4.04.2023 (h15-17) - HTML e CSS: stili per il template, AULA D (Accesso da Via Zamboni, 34)
  9. [L] MER 5.04.2023 (h9-11) - CSS: font, colori, immagini e icone, AULA B (Accesso da Via Zamboni, 34)
 
 4a settimana `rilevazione opinione degli studenti`
@@ -101,7 +103,7 @@ Il calendario delle lezioni:
 5a settimana
 
  11. [L] LUN 17.04.2023 (h17-19) - Framework per la grafica: Bootstrap, AULA B (Accesso da Via Zamboni, 34)
- 12. [L] MAR 18.04.2023 (h13-15) - HTML and CSS: ricapitoliamo, AULA D (Accesso da Via Zamboni, 34)
+ 12. [L] MAR 18.04.2023 (h15-17) - HTML and CSS: ricapitoliamo, AULA D (Accesso da Via Zamboni, 34)
  13. [L] MER 19.04.2023 (h9-11) - Github e pubblicazione del sito web, AULA B (Accesso da Via Zamboni, 34)
 
 6a settimana
