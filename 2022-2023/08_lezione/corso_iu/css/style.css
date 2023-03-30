@@ -1,0 +1,74 @@
+body {
+  margin: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+button {
+  
+}
+
+nav ul {
+  margin-bottom: 0px !important;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li {text-align: center;}
+
+header {
+	padding: 3em 3em 0px 3em;
+	text-align: center;
+  background-color: #4F138F;
+  color: white;
+}
+
+h1 {
+	padding: 2em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p , p a , footer a {
+  font-weight: 300;
+}
+
+section, footer {
+  padding: 2em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+}
+
+nav ul li.active {
+  background-color: white;
+}
+
+nav ul li.active a {
+  color: #4F138F;
+}
+
+p {
+  font-size: 1.3em;
+  letter-spacing: 0.02em;
+}
+
+@media only screen and (max-width: 575.98px) {
+
+  nav ul {padding-left: 0px ;}
+  nav ul li { display: block ; }
+
+}
