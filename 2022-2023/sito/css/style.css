@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+#homeimg {
+  height: 300px;
+  width: auto;
+}
+
+header {
+  background-color:#222FE6 ;
+  color: #fff;
+}
+
+header, section {
+  padding: 5% 5% 0px 5%;
+}
+
+.whitelink {
+  color: #fff;
+}
+
+.active {
+  color: #222FE6;
+  background-color: #fff;
+  border-radius: 3px 3px 0px 0px;
+}
+
+.nounderline {
+  text-decoration: none;
+  padding: 10px 10px 0px 10px;
+}
