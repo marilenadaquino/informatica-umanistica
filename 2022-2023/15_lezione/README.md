@@ -10,22 +10,6 @@
     include tutte le informazioni descritte in [template](https://github.com/marilenadaquino/informatica-umanistica/blob/master/template_documentazione.md) e che rispetta i limiti di parole
     * 1 foglio di stile (comevipare.css)
 
- - [x] preparare una **presentazione (orale o powerpoint)** di _max 10 minuti_, e.g.
-    * (1 minuto) introduzione al sito: racconta l'abstract
-    * (3 minuti) discussione della progettazione web:
-      * target utente
-      * analisi competitors
-      * wireframe
-      * strumenti tecnologici a supporto della progettazione
-    * (7 minuti) discussione delle strategie di comunicazione:
-      * scelte di grafica e UI/UX rispetto al target utente scelto
-      * strumenti per la promozione del sito per raggiungere il target
-      * valutazione degli obiettivi
-
-      **Nota 1** Se il progetto è di gruppo (max 3 persone), la presentazione può essere di 15 minuti e tutti i membri del gruppo devono intervenire.
-
-      **Nota 2** L'ordine degli argomenti può differire dall'esempio proposto, ma non i contenuti minimi
-
  - [x] **inviare la URL** del sito al docente _almeno il giorno prima dell'esame_ in uno dei seguenti modi:
     * se il sito è stato pubblicato su github, aprire una
     [issue sul repository del corso](https://github.com/marilenadaquino/informatica-umanistica/issues) (ovvero pubblicare un post), includendo: nome, cognome. nome del sito. URL del sito web
@@ -54,7 +38,7 @@ Un progetto per essere **ammesso all'esame** deve rispettare i seguenti requisit
 
  - [x] il sito web deve essere **online** e raggiungibile tramite una URL
  - [x] il sito deve contenere la **pagina di documentazione** del progetto, inclusa come pagina HTML
- - [x] il progetto è svolto da non più di **3 persone**
+ - [x] il progetto è svolto da non più di **2 persone**
  - [x] il sito non contiene testo in **comic sans** :)
 
 
@@ -106,7 +90,7 @@ A questo punteggio andiamo a sottrarre punti per ogni aspetto riportato nella se
 
 | Criterio         | Punteggio |
 | ------------------------------- | --------- |
-| progetto con più di **3 persone** | non ammesso all'esame |
+| progetto con più di **2 persone** | non ammesso all'esame |
 | mancanza di **linguaggio** specifialistico o incompletezza degli apetti trattati | fino a -4 |
 
 **Documentazione**
